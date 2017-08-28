@@ -6,7 +6,7 @@ import java.util.List;
 public class StudentsDataBase {
     public static List<Student> students = new ArrayList<>();
 
-    public static void addInfoAboutStudent(String name, int age, double averageGrade) {
+    public static void addInfoAboutStudent(String name, int age, University university, double averageGrade) {
         Student student = new Student(name, age, averageGrade);
         students.add(student);
         printInfoAboutStudent(student.getName(), student);
