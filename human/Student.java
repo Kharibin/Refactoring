@@ -28,37 +28,14 @@ public class Student extends UniversityPerson {
     public void learn() {
     }
 
-    /*public String getUniversity() {
-        return university;
-    }
-
-    public void setUniversity(String university) {
-        this.university = university;
-    }*/
-
     @Override
     public String getPosition() {
         return "Студент";
     }
 
-    public void incAverageGradeBy01() {
-        averageGrade += 0.1;
+    public void incAverageGrade(double delta){
+        setAverageGrade(getAverageGrade() + delta);
     }
-
-    public void incAverageGradeBy02() {
-        averageGrade += 0.2;
-    }
-
-    /*public void setValue(String name, double value) {
-        if (name.equals("averageGrade")) {
-            averageGrade = value;
-            return;
-        }
-        if (name.equals("course")) {
-            course = (int) value;
-            return;
-        }
-    }*/
 
     public void setCourse(int value){
         course = value;
@@ -68,12 +45,12 @@ public class Student extends UniversityPerson {
         averageGrade = value;
     }
 
-    public void setBeginningOfSession(int day, int month, int year) {
-        beginningOfSession = new Date(year, month, day);
+    public void setBeginningOfSession(Date date) {
+        beginningOfSession = date;
     }
 
-    public void setEndOfSession(int day, int month, int year) {
-        endOfSession = new Date(year, month, day);
+    public void setEndOfSession(Date date) {
+        endOfSession = date;
     }
 
     public double getAverageGrade() {
