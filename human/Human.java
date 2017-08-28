@@ -76,9 +76,9 @@ public class Human implements Alive{
         this.name = name;
     }
 
-
-
-
+    public String getPosition(){
+        return "Человек";
+    }
 
     public int getId() {
         return id;
@@ -95,5 +95,9 @@ public class Human implements Alive{
     @Override
     public void live() {
 
+    }
+
+    public void printData() {
+        System.out.println(getPosition()+ ": " + name);
     }
 }
